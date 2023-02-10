@@ -4,5 +4,21 @@ on:
   push:
     branches: [main]
     
+concurrency: build
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Install Dependencies
+        run: mvn dependency:copy-dependencies
+
+    
 
     
