@@ -15,53 +15,41 @@ public class MainInserirFuncionarios {
 
 	public static void main(String[] args) throws SQLException, InterruptedException, IOException {
 			
-		// Neste código eu foquei na inserção de todos os funcionarios
-		
 		Connect con = new Connect();
 		Connection connect = con.iniciaConexao();
 		new CriaBanco(connect);
 		
 		DaoFuncionarioMetodos dao = new DaoFuncionarioMetodos(connect);
 		
-		Funcionario maria = new Funcionario("Maria", LocalDate.of(2000, 10, 18));
-		maria.setSalario(new BigDecimal(2009.44));
-		maria.setFuncao("Operador");
+		Funcionario maria = new Funcionario("Maria", LocalDate.of(2000, 10, 18), 
+				new BigDecimal(2009.44), "Operador");
 		
-		Funcionario joao = new Funcionario("João", LocalDate.of(1990, 05, 12));
-		joao.setSalario(new BigDecimal(2284.38));
-		joao.setFuncao("Operador");
+		Funcionario joao = new Funcionario("João", LocalDate.of(1990, 05, 12), 
+				new BigDecimal(2284.38), "Operador");
 		
-		Funcionario caio = new Funcionario("Caio", LocalDate.of(1961, 05, 2));
-		caio.setSalario(new BigDecimal(9836.14));
-		caio.setFuncao("Coordenador");
+		Funcionario caio = new Funcionario("Caio", LocalDate.of(1961, 05, 2), 
+				new BigDecimal(9836.14), "Coordenador");
 		
-		Funcionario miguel = new Funcionario("Miguel", LocalDate.of(1988, 10, 14));
-		miguel.setSalario(new BigDecimal(19119.88));
-		miguel.setFuncao("Diretor");
+		Funcionario miguel = new Funcionario("Miguel", LocalDate.of(1988, 10, 14), 
+				new BigDecimal(19119.88), "Diretor");
 		
-		Funcionario alice = new Funcionario("Alice", LocalDate.of(1995, 01, 5));
-		alice.setSalario(new BigDecimal(2234.68));
-		alice.setFuncao("Recepcionista");
+		Funcionario alice = new Funcionario("Alice", LocalDate.of(1995, 01, 5), 
+				new BigDecimal(2234.68), "Recepcionista");
 		
-		Funcionario heitor = new Funcionario("Heitor", LocalDate.of(1999, 11, 19));
-		heitor.setSalario(new BigDecimal(1582.72));
-		heitor.setFuncao("Operador");
+		Funcionario heitor = new Funcionario("Heitor", LocalDate.of(1999, 11, 19), 
+				new BigDecimal(1582.72), "Operador");
 		
-		Funcionario arthur = new Funcionario("Arthur", LocalDate.of(1993, 03, 31));
-		arthur.setSalario(new BigDecimal(4071.84));
-		arthur.setFuncao("Contador");
+		Funcionario arthur = new Funcionario("Arthur", LocalDate.of(1993, 03, 31), 
+				new BigDecimal(4071.84), "Contador");
 		
-		Funcionario laura = new Funcionario("Laura", LocalDate.of(1994, 07, 8));
-		laura.setSalario(new BigDecimal(3017.45));
-		laura.setFuncao("Gerente");
+		Funcionario laura = new Funcionario("Laura", LocalDate.of(1994, 07, 8), 
+				new BigDecimal(3017.45), "Gerente");
 		
-		Funcionario heloisa = new Funcionario("Heloísa", LocalDate.of(2003, 05, 24));
-		heloisa.setSalario(new BigDecimal(1606.85));
-		heloisa.setFuncao("Eletricista");
+		Funcionario heloisa = new Funcionario("Heloísa", LocalDate.of(2003, 05, 24), 
+				new BigDecimal(1606.85), "Eletricista");
 		
-		Funcionario helena = new Funcionario("Helena", LocalDate.of(1996, 9, 2));
-		helena.setSalario(new BigDecimal(2799.93));
-		helena.setFuncao("Gerente");
+		Funcionario helena = new Funcionario("Helena", LocalDate.of(1996, 9, 2), 
+				new BigDecimal(2799.93), "Gerente");
 		
 		dao.inserirFuncionario(maria);
 		dao.inserirFuncionario(joao);
